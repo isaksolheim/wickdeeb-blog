@@ -4,4 +4,11 @@ html, body {
   font-family: 'Raleway', sans-serif;
 }
 
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
 @import './navbar';
+@import './landing';
+@import './footer';
