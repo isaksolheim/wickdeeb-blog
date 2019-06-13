@@ -1,0 +1,39 @@
+.navbar-container {
+  width: 100%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  height: 50px;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .logo {
+    position: absolute;
+    font-size: 25px;
+    left: 20px;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  #button {
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+  }
+}
+
+.navbar-container.responsive {
+  .nav-items {
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: blue;
+    margin-top: 50px;
+  }
+}
