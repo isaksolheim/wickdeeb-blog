@@ -7,6 +7,7 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Category from './components/Category';
+import ScrollToTop from './components/ScrollToTop';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,23 +20,25 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          <Navbar data={this.state.data} />
-          <Switch>
-            <Route exact path="/" render={(props) => (
-              <Landing {...props} data={this.state.data} />
-            )} />
-            <Route exact path="/articles" render={(props) => (
-              <Articles {...props} data={this.state.data} />
-            )} />
-            <Route exact path="/:slug" render={(props) => (
-              <Article {...props} data={this.state.data} />
-            )} />
-            <Route exact path="/category/:category" render={(props) => (
-              <Category {...props} data={this.state.data} />
-            )} />
-            <Route exact path="/about" component={About} />
-          </Switch>
-          <Footer data={this.state.data} />
+          <ScrollToTop>
+            <Navbar data={this.state.data} />
+            <Switch>
+              <Route exact path="/" render={(props) => (
+                <Landing {...props} data={this.state.data} />
+              )} />
+              <Route exact path="/articles" render={(props) => (
+                <Articles {...props} data={this.state.data} />
+              )} />
+              <Route exact path="/:slug" render={(props) => (
+                <Article {...props} data={this.state.data} />
+              )} />
+              <Route exact path="/category/:category" render={(props) => (
+                <Category {...props} data={this.state.data} />
+              )} />
+              <Route exact path="/about" component={About} />
+            </Switch>
+            <Footer data={this.state.data} />
+          </ScrollToTop>
         </Router>
       </div>
     );
