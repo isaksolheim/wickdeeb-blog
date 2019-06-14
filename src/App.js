@@ -19,7 +19,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          <Navbar />
+          <Navbar data={this.state.data} />
           <Switch>
             <Route exact path="/" render={(props) => (
               <Landing {...props} data={this.state.data} />

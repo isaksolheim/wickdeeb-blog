@@ -17,6 +17,19 @@ class Navbar extends React.Component {
   }
 
   render() {
+    var posts = this.props.data.data.posts;
+    // getting all categories
+    let categories = [];
+    for (var i = 0; i < posts.length; i++) {
+      //all posts
+      for (var j = 0; j < posts[i].tags.length; j++) {
+        // all categories
+        if (!categories.includes(posts[i].tags[j])) {
+          // pushed unique categories to array
+          categories.push(posts[i].tags[j]);
+        }
+      }
+    }
     return(
       <div id="navbar" className="navbar-container">
         <div className="logo">
@@ -24,19 +37,20 @@ class Navbar extends React.Component {
         </div>
         <div id="button" className="nav-item"><i className="fas fa-caret-down" onClick={this.dropdown}></i></div>
         <div className="nav-items">
-          <div className="nav-item">
-            <Link to="/" onClick={this.dropdown}>Home</Link>
-          </div>
-          <div className="nav-item">
-            <Link to="/articles" onClick={this.dropdown}>Articles</Link>
-          </div>
+          <Link to="/" onClick={this.dropdown}>
+            <div className="nav-item">Home</div>
+          </Link>
+          <Link to="/articles" onClick={this.dropdown}>
+            <div className="nav-item">Articles</div>
+          </Link>
           <div className="categories">
-            <div className="nav-item">
-              <Link to="#" onClick={this.dropdown}>Category 1</Link>
-            </div>
-            <div className="nav-item">
-              <Link to="#" onClick={this.dropdown}>Category 2</Link>
-            </div>
+            {categories.map(category => (
+              <Link to={`/category/${category}`} key={category} onClick={this.dropdown}>
+                <div className="nav-item">
+                  {category}
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

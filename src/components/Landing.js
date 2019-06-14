@@ -28,7 +28,7 @@ function Landing(props) {
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
-        <div className="title">WICKDEEB Programming Articles</div>
+        <div className="title">Articles About Programming and Technology</div>
         <div className="read-about">Read About</div>
         <Link to="/articles">
           <div className="category">Everything</div>
