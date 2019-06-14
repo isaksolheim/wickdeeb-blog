@@ -4,47 +4,132 @@
   .top {
     padding: 20px;
     color: white;
-    background-color: blue;
-    height: 80vh;
+    background-color: color(primary);
+    height: 70vh;
+    box-shadow: 0 50px 80px 80px rgba(36,37,130,1);
+    margin-bottom: 140px;
 
-    h1 {
-      margin-bottom: 100px;
-
-    }
-    .category {
-      margin: 0 auto;
-      cursor: pointer;
-      border: 1px solid white;
-      border-radius: 3px;
-      width: 200px;
-      padding: 12px 20px;
-      font-size: 30px;
-      transition: all .3s;
-      background-color: blue;
+    .title {
+      font-size: 40px;
+      margin-bottom: 50px;
     }
 
-    .category:hover {
-      color: black;
-      background-color: white;
+    .read-about {
+      font-size: 25px;
     }
+
+
+    a {
+      color: white;
+      text-decoration: none;
+      .category {
+        display: inline-block;
+        margin: 10px;
+        cursor: pointer;
+        border: 1px solid white;
+        border-radius: 3px;
+        width: 200px;
+        padding: 12px 20px;
+        font-size: 30px;
+        transition: all .3s;
+        background-color: color(priamry);
+      }
+
+      .category:hover {
+        color: color(primary);
+        background-color: white;
+      }
+    }
+  } 
+
+  .recent-text {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px;
   }
 
   .recent-article {
+    position: relative;
     cursor: pointer;
-    margin: 0 auto;
+    display: inline-block;
+    margin: 10px;
     width: 300px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, .4);
-    border-radius: 5px;
+    border-radius: 8px;
     img {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-radius: 8px;
       width: 100%;
     }
     transition: all .3s;
+
+    .post-tags {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+
+      .post-tag {
+        font-family: 'Fjalla One', sans-serif;
+        background-color: color(primary);
+        text-transform: uppercase;
+        color: white;
+        font-size: 18px;
+        padding: 3px;
+        margin: 3px;
+        border-radius: 3px;
+      }
+    }
+
+    .post-title {
+      position: absolute;
+      bottom: 8px;
+      left: 5px;
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      padding: 5px;
+      border-radius: 3px;
+    }
   }
 
   .recent-article:hover {
-    width: 320px;
+    //width: 320px;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.05);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .more-button {
+    font-family: 'Fjalla One', sans-serif;
+    background-color: color(primary);
+    color: white;
+    font-size: 30px;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 150px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 40px;
+  }
+
+  .more-button:hover {
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.05);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
   }
 
 
@@ -235,7 +320,7 @@
   #stars:after {
       content: '';
       position: absolute;
-      top: 2000px;
+      top: 600px;
       width: 1px;
       height: 1px;
       background: transparent;
@@ -479,7 +564,7 @@
   #stars2:after {
       content: '';
       position: absolute;
-      top: 2000px;
+      top: 600px;
       width: 2px;
       height: 2px;
       background: transparent;
@@ -572,7 +657,7 @@
   #stars3:after {
       content: '';
       position: absolute;
-      top: 2000px;
+      top: 600px;
       width: 3px;
       height: 3px;
       background: transparent;
@@ -610,7 +695,7 @@
           transform: translateY(0px);
       }
       to {
-          transform: translateY(-2000px);
+          transform: translateY(-1500px);
       }
   }
 

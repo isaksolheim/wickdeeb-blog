@@ -1,0 +1,65 @@
+.articles-container {
+  text-align: center;
+
+  .title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px;
+    margin: 20px;
+  }
+
+  .recent-article {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, .4);
+    border-radius: 8px;
+    img {
+      border-radius: 8px;
+      width: 100%;
+    }
+    transition: all .3s;
+
+    .post-tags {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+
+      .post-tag {
+        font-family: 'Fjalla One', sans-serif;
+        background-color: color(primary);
+        text-transform: uppercase;
+        color: white;
+        font-size: 18px;
+        padding: 3px;
+        margin: 3px;
+        border-radius: 3px;
+      }
+    }
+
+    .post-title {
+      position: absolute;
+      bottom: 8px;
+      left: 5px;
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      padding: 5px;
+      border-radius: 3px;
+    }
+  }
+
+  .recent-article:hover {
+    //width: 320px;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.05);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Landing(props) {
   var posts = props.data.data.posts;
@@ -14,6 +15,12 @@ function Landing(props) {
       }
     }
   }
+  
+  const slugify = (title) => {
+    //slugifys title
+    return title.replace(/\s+/g, '-').toLowerCase();
+  }
+
 
   return(
     <div className="landing-container">
@@ -21,22 +28,36 @@ function Landing(props) {
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
-        <h1>Wickdeeb Programming Articles</h1>
-        <h2>Read About</h2>
-        <div className="category">Everything</div>
+        <div className="title">WICKDEEB Programming Articles</div>
+        <div className="read-about">Read About</div>
+        <Link to="/articles">
+          <div className="category">Everything</div>
+        </Link>
         {categories.map(category => (
-          <div className="category" key={category}>
-            {category}
-          </div>
+          <Link to={`/category/${category}`} key={category}>
+            <div className="category">
+              {category}
+            </div>
+          </Link>
         ))}
       </div>
-      <h2>Recent Articles</h2>
+      <div className="recent-text">RECENT ARTICLES</div>
       {posts.map(post => (
-        <div className="recent-article" key={post.id}>
-          <img src={post.image} alt={post.title} />
-          <h3>{post.title}</h3>
-        </div>
+        <Link to={slugify(post.title)} key={post.id}>
+          <div className="recent-article">
+            <img src={post.image} alt={post.title} />
+            <div className="post-tags">
+              {post.tags.map(tag => (
+                <div className="post-tag" key={tag}>{tag}</div>
+              ))}
+            </div>
+            <div className="post-title">{post.title}</div>
+          </div>
+        </Link>
       ))}
+      <Link to="/articles">
+        <div className="more-button">ALL ARTICLES</div>
+      </Link>
     </div>
   );
 }

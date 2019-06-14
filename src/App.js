@@ -6,6 +6,7 @@ import Article from './components/Article';
 import About from './components/About';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Category from './components/Category';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,6 +29,9 @@ class App extends React.Component {
             )} />
             <Route exact path="/:slug" render={(props) => (
               <Article {...props} data={this.state.data} />
+            )} />
+            <Route exact path="/category/:category" render={(props) => (
+              <Category {...props} data={this.state.data} />
             )} />
             <Route exact path="/about" component={About} />
           </Switch>

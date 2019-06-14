@@ -1,0 +1,26 @@
+.article-container {
+  padding: 25px;
+
+  .post-title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 35px; 
+  }
+
+  .tags {
+    .post-tag {
+      font-size: 20px;
+      display: inline-block;
+      background-color: color(primary);
+      color: white;
+      border-radius: 5px;
+      padding: 2px 5px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

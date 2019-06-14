@@ -9,6 +9,21 @@ html, body {
   position: relative;
 }
 
+$colors: (
+  primary: #242582,
+  primary-light: lighten(#473198, 40%),
+  primary-dark: darken(#473198, 40%),
+  secondary: #2F2FA2,
+  accent: #F64C72,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
 @import './navbar';
 @import './landing';
 @import './footer';
+@import './article';
+@import './category';
+@import './articles';

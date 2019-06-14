@@ -18,12 +18,14 @@ function Footer(props) {
 
   return(
     <div className="footer-container">
-      <h2>Wickdeeb</h2>
-      {categories.map(category => (
-        <div className="category" key={category}>
-          <Link to={`/${category}`}>{category}</Link>
-        </div>
-      ))}
+      <div className="footer">
+        <div className="title"><Link to="/">WICKDEEB</Link></div>
+        {categories.map(category => (
+          <div className="category" key={category}>
+            <Link to={`/category/${category}`}>{category}</Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
