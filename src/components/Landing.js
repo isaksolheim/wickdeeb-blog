@@ -28,36 +28,42 @@ function Landing(props) {
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
-        <div className="title">Articles About Programming and Technology</div>
-        <div className="read-about">Read About</div>
-        <Link to="/articles">
-          <div className="category">Everything</div>
-        </Link>
-        {categories.map(category => (
-          <Link to={`/category/${category}`} key={category}>
-            <div className="category">
-              {category}
-            </div>
+        <div className="content">
+          <div className="title">Articles About Programming and Technology</div>
+          <div className="read-about">Read About</div>
+          <Link to="/articles">
+            <div className="category">Everything</div>
           </Link>
-        ))}
+          {categories.map(category => (
+            <Link to={`/category/${category}`} key={category}>
+              <div className="category">
+                {category}
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-      <div className="recent-text">RECENT ARTICLES</div>
-      {posts.map(post => (
-        <Link to={slugify(post.title)} key={post.id}>
-          <div className="recent-article">
-            <img src={post.image} alt={post.title} />
-            <div className="post-tags">
-              {post.tags.map(tag => (
-                <div className="post-tag" key={tag}>{tag}</div>
-              ))}
-            </div>
-            <div className="post-title">{post.title}</div>
-          </div>
+      <div className="section2">
+        <div className="recent-text">RECENT ARTICLES</div>
+        <div className="articles">
+          {posts.map(post => (
+            <Link to={slugify(post.title)} key={post.id}>
+              <div className="recent-article">
+                <img src={post.image} alt={post.title} />
+                <div className="post-title">{post.title}</div>
+                <div className="post-tags">
+                  {post.tags.map(tag => (
+                    <div className="post-tag" key={tag}>{tag}</div>
+                  ))}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <Link to="/articles">
+          <div className="more-button">ALL ARTICLES</div>
         </Link>
-      ))}
-      <Link to="/articles">
-        <div className="more-button">ALL ARTICLES</div>
-      </Link>
+      </div>
     </div>
   );
 }

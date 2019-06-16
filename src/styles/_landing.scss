@@ -1,4 +1,5 @@
 .landing-container {
+  
   text-align: center;
 
   .top {
@@ -50,8 +51,8 @@
   .recent-article {
     position: relative;
     cursor: pointer;
-    display: inline-block;
-    margin: 10px;
+    display: block;
+    margin: 0 auto;
     width: 300px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, .4);
     border-radius: 8px;
@@ -87,6 +88,10 @@
       font-size: 20px;
       padding: 5px;
       border-radius: 3px;
+    }
+
+    .post-start {
+      display: none;
     }
   }
 
@@ -130,6 +135,34 @@
     -moz-transform: scale(1.05);
     transition: all 200ms ease-in;
     transform: scale(1.05);
+  }
+
+  @include desktop {
+    .content {
+      margin: 0 auto;
+      width: 840px;
+
+      .title {
+        font-size: 50px;
+        font-weight: 500;
+      }
+
+      .read-about {
+        font-size: 40px;
+        font-weight: 500;
+      }
+    }
+
+    .section2 {
+      max-width: 1000px;
+      margin: 0 auto;
+      .articles {
+        .recent-article {
+          display: inline-block;
+          margin: 10px;
+        }
+      }
+    }
   }
 
 

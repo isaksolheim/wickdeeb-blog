@@ -6,7 +6,11 @@ html, body {
 
 .App {
   min-height: 100vh;
+  margin-top: 50px;
   position: relative;
+}
+
+.content {
 }
 
 $colors: (
@@ -19,6 +23,12 @@ $colors: (
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
+}
+
+@mixin desktop {
+  @media (min-width: 840px) {
+    @content;
+  }
 }
 
 @import './navbar';
