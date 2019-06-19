@@ -25,7 +25,7 @@ function Category(props) {
     <div className="category-container">
       <div className="category">{category}</div>
       {filteredPosts.map(post => (
-        <Link to={slugify(post.title)} key={post.id}>
+        <Link to={`/${slugify(post.title)}`} key={post.id}>
           <div className="article">
             <img src={post.image} alt={post.title} />
             <div className="post-tags">
