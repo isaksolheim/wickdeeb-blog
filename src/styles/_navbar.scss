@@ -22,8 +22,6 @@
   text-align: center;
   height: 70px;
   z-index: 3;
-  position: fixed;
-  top: 0;
 
   a {
     text-decoration: none;
@@ -53,32 +51,6 @@
   transition: all 0.3s ease;
 }
 
-.navbar-container.small {
-  position: fixed;
-  height: 40px;
-  transition: all 0.3s ease;
-
-  .logo {
-    position: absolute;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 20px;
-    left: 20px;
-    margin-top: 15px;
-  }
-
-  .nav-items {
-    display: none;
-  }
-
-  #button {
-    font-size: 40px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    margin-top: 10px;
-  }
-
-}
 
 .navbar-container.responsive {
   .nav-items {

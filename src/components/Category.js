@@ -37,9 +37,8 @@ function Category(props) {
           </div>
         </Link>
       ))}
-      <Link to="/articles">
-        <div className="more-button">ALL ARTICLES</div>
-      </Link>
+      <br />
+      <Link to="/articles" className="btn btn-outline-secondary">All Articles</Link>
     </div>
   );
 }

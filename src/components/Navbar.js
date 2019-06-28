@@ -31,7 +31,21 @@ class Navbar extends React.Component {
       }
     }
     return(
-      <div id="navbar" className="navbar-container">
+      <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 className="my-0 mr-md-auto font-weight-normal"><Link to="/">WICKDEEB</Link></h5>
+        <nav className="my-2 my-md-0 mr-md-3">
+          {categories.map(category => (
+            <Link 
+              to={`/category/${category}`} 
+              key={category} 
+              className="p-2 text-dark">
+                {category}
+            </Link>
+          ))}
+        </nav>
+    </div>
+      /*
+      <div id="navbar" className="navbar-container>
         <div className="content">
           <div className="logo">
             <Link to="/">WICKDEEB</Link>
@@ -56,6 +70,7 @@ class Navbar extends React.Component {
           </div>
         </div>
       </div>
+      */
     );
   }
 }
