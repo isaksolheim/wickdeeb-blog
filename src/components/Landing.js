@@ -3,14 +3,9 @@ import { Link } from 'react-router-dom';
 
 function Landing(props) {
   var posts = props.data.data.posts;
-  // featured post
-  let featured;
   // getting all categories
   let categories = [];
   for (var i = 0; i < posts.length; i++) {
-    if (posts[i].featured) {
-      featured = posts[i];
-    }
     //all posts
     for (var j = 0; j < posts[i].tags.length; j++) {
       // all categories
@@ -41,14 +36,6 @@ function Landing(props) {
 
 
       <div className="container">
-      <div className="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-          <div className="col-md-6 px-0">
-            <h1 className="display-4 font-italic">{featured.title}</h1>
-            <p className="lead my-3">{featured.featuredText}</p>
-            <p className="lead mb-0"><Link to={slugify(featured.title)} className="text-white font-weight-bold">Continue reading...</Link></p>
-          </div>
-        </div>
-
         <div className="articles">
           {posts.map(post => (
             <Link to={slugify(post.title)} key={post.id}>

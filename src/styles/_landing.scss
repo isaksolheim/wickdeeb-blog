@@ -1,5 +1,12 @@
 .btn.btn-outline-secondary {
   margin: 5px;
+  border-color: color(primary);
+  color: color(primary);
+}
+
+.btn.btn-outline-secondary:hover {
+  background-color: color(primary);
+  color: white;
 }
 
 
