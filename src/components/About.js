@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
   return(
     <div className="about-container">
-      About
+      Created by <a href="https://www.isaks.io">isaks.io</a>
     </div>
   );
 }

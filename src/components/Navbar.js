@@ -44,33 +44,6 @@ class Navbar extends React.Component {
           ))}
         </nav>
     </div>
-      /*
-      <div id="navbar" className="navbar-container>
-        <div className="content">
-          <div className="logo">
-            <Link to="/">WICKDEEB</Link>
-          </div>
-          <div id="button" className="nav-item"><i className="fas fa-caret-down" onClick={this.dropdown}></i></div>
-          <div className="nav-items">
-            <Link to="/" onClick={this.dropdown}>
-              <div className="nav-item">Home</div>
-            </Link>
-            <Link to="/articles" onClick={this.dropdown}>
-              <div className="nav-item">Articles</div>
-            </Link>
-            <div className="categories">
-              {categories.map(category => (
-                <Link to={`/category/${category}`} key={category} onClick={this.dropdown}>
-                  <div className="nav-item">
-                    {category}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-      */
     );
   }
 }
