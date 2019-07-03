@@ -8,3 +8,115 @@
   background-color: color(primary);
   color: white;
 }
+
+.recent-article {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, .4);
+  border-radius: 8px;
+  img {
+    border-radius: 8px;
+    width: 100%;
+  }
+  transition: all .3s;
+
+  .post-tags {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    .post-tag {
+      font-family: 'Fjalla One', sans-serif;
+      background-color: color(primary);
+      text-transform: uppercase;
+      color: white;
+      font-size: 18px;
+      padding: 3px;
+      margin: 3px;
+      border-radius: 3px;
+    }
+  }
+
+  .post-title {
+    position: absolute;
+    bottom: 8px;
+    left: 5px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 3px;
+  }
+
+  .post-start {
+    display: none;
+  }
+}
+
+.recent-article:hover {
+  //width: 320px;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.05);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.05);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.05);
+  transition: all 200ms ease-in;
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none;
+}
+
+.more-button {
+  font-family: 'Fjalla One', sans-serif;
+  background-color: color(primary);
+  color: white;
+  font-size: 30px;
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 150px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.more-button:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.05);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.05);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.05);
+  transition: all 200ms ease-in;
+  transform: scale(1.05);
+}
+
+@include desktop {
+  .title {
+    font-size: 50px;
+    font-weight: 500;
+  }
+
+  .read-about {
+    font-size: 40px;
+    font-weight: 500;
+  }
+}
+
+.section2 {
+  max-width: 1000px;
+  margin: 0 auto;
+  .articles {
+    .recent-article {
+      display: inline-block;
+      margin: 10px;
+    }
+  }
+}
