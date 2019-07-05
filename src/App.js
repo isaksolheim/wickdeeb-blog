@@ -32,7 +32,10 @@ class App extends React.Component {
   render() {
     if (!this.state.isLoaded) {
       return(
-        <div class="loader"></div>
+        <div className="loading-container">
+          <div className="title">WICKDEEB</div>
+          <div className="loader"></div>
+        </div>
       );
     } else {
       return (

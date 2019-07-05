@@ -5,6 +5,7 @@ html, body {
 }
 
 .App {
+  animation: fadeIn 1.5s;
   min-height: 100vh;
   position: relative;
 }
@@ -33,6 +34,17 @@ $colors: (
     @content;
   }
 }
+
+/* Animation on page landing */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 @import './loading';
 @import './navbar';
