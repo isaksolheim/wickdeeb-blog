@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Markdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
+import CodeBlock from './CodeBlock';
 
 function Article(props) {
   const slugify = (title) => {
@@ -32,7 +33,10 @@ function Article(props) {
         </div>
         <img src={post.image} alt={post.title} />
         <div className="markdown-container">
-          <Markdown source={markdown} />
+          <ReactMarkdown 
+            source={markdown} 
+            renderers={{ code: CodeBlock }}
+          />
         </div>
       </article>
     );
