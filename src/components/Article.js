@@ -31,7 +31,7 @@ function Article(props) {
             </Link>
           ))}
         </div>
-        <img src={post.image} alt={post.title} />
+        <img src={`./images/${post.image}`} alt={post.title} />
         <div className="markdown-container">
           <ReactMarkdown 
             source={markdown} 

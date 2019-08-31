@@ -40,7 +40,7 @@ function Landing(props) {
           {posts.map(post => (
             <Link to={slugify(post.title)} key={post.id}>
               <div className="recent-article">
-                <img src={post.image} alt={post.title} />
+                <img src={`./images/${post.image}`} alt={post.title} />
                 <div className="post-title">{post.title}</div>
                 <div className="post-tags">
                   {post.tags.map(tag => (
